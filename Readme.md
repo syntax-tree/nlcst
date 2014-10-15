@@ -134,6 +134,7 @@ interface TextNode < Text {
 - [TextOM](https://github.com/wooorm/textom) — Provides an object-oriented manipulation interface to NLCST;
 - [nlcst-to-string](https://github.com/wooorm/nlcst-to-string) — Transforms a CST into a string;
 - [nlcst-to-textom](https://github.com/wooorm/nlcst-to-textom) — Transforms a CST into a [TextOM](https://github.com/wooorm/textom) object model;
+- [nlcst-test](https://github.com/wooorm/nlcst-test) — Validate an NLCST node.
 
 ## License
 
