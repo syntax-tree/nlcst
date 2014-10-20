@@ -89,10 +89,10 @@ interface WordNode < Parent {
 
 ### SymbolNode
 
-Symbol ([Parent](#parent)) represents typographical devices like white space, punctuation, signs, and more, different from characers which represent sounds (like letters and numerals).
+Symbol ([Text](#text)) represents typographical devices like white space, punctuation, signs, and more, different from characers which represent sounds (like letters and numerals).
 
 ```
-interface SymbolNode < Parent {
+interface SymbolNode < Text {
     type: "SymbolNode";
 }
 ```
