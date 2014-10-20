@@ -87,29 +87,39 @@ interface WordNode < Parent {
 }
 ```
 
-### PunctuationNode
+### SymbolNode
 
-Punctuation ([Parent](#parent)) represents typographical devices which aids understanding and correct reading of other grammatical units.
+Symbol ([Parent](#parent)) represents typographical devices like white space, punctuation, signs, and more, different from characers which represent sounds (like letters and numerals).
 
 ```
-interface PunctuationNode < Parent {
+interface SymbolNode < Parent {
+    type: "SymbolNode";
+}
+```
+
+### PunctuationNode
+
+Punctuation ([SymbolNode](#symbolnode)) represents typographical devices which aid understanding and correct reading of other grammatical units.
+
+```
+interface PunctuationNode < SymbolNode {
     type: "PunctuationNode";
 }
 ```
 
 ### WhiteSpaceNode
 
-White Space ([PunctuationNode](#punctuation)) represents typographical devices devoid of content, separating other grammatical units.
+White Space ([SymbolNode](#symbolnode)) represents typographical devices devoid of content, separating other grammatical units.
 
 ```
-interface WhiteSpaceNode < PunctuationNode {
+interface WhiteSpaceNode < SymbolNode {
     type: "WhiteSpaceNode";
 }
 ```
 
 ### SourceNode
 
-Source ([Text](#text)) represents an external (ungrammatical) value embedded into a grammatical unit: a hyperlink, an emoticon, and such.
+Source ([Text](#text)) represents an external (ungrammatical) value embedded into a grammatical unit: a hyperlink, a line, and such.
 
 ```
 interface SourceNode < Text {
