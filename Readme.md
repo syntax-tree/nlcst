@@ -1,4 +1,4 @@
-# ![NLCST](http://wooorm.com/nlcst.png)
+# ![NLCST](https://cdn.rawgit.com/wooorm/nlcst/master/logo.svg)
 
 Natural language for human and machine.
 
