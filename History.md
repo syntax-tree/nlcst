@@ -1,4 +1,5 @@
 
+ * Add `logo.svg`
  * Change super-class of SymbolNode from Parent to Text
  * Add definition of SymbolNode
  * Add changelog
