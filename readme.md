@@ -169,4 +169,4 @@ MIT © Titus Wormer
 
 [symbol]: #symbol
 
-[changelog]: https://github.com/wooorm/mdast/releases
+[changelog]: https://github.com/wooorm/nlcst/releases
