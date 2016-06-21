@@ -9,6 +9,9 @@ exact replica of the original document can be re-created.
 **NLCST** is a subset of [**Unist**][unist], and implemented by
 [**retext**][retext].
 
+This document describes version 1.0.0 of **NLCST**.
+[Changelog »][changelog]
+
 ## Table of Contents
 
 -   [CST](#cst)
@@ -165,3 +168,5 @@ MIT © Titus Wormer
 [text]: https://github.com/wooorm/unist#text
 
 [symbol]: #symbol
+
+[changelog]: https://github.com/wooorm/mdast/releases
