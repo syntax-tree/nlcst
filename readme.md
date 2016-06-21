@@ -2,150 +2,166 @@
 
 Natural language for human and machine.
 
----
+**NLCST** discloses the parts of natural language as a concrete syntax
+tree.  Concrete means all information is stored in this tree and an
+exact replica of the original document can be re-created.
 
-> Note: Several projects use this document. Do not make changes without consulting with [TextOM](https://github.com/wooorm/textom),  [parse-latin](https://github.com/wooorm/parse-latin), and [retext](https://github.com/wooorm/retext).
+**NLCST** is a subset of [**Unist**][unist], and implemented by
+[**retext**][retext].
+
+## Table of Contents
+
+-   [CST](#cst)
+
+    -   [Root](#root)
+    -   [Paragraph](#paragraph)
+    -   [Sentence](#sentence)
+    -   [Word](#word)
+    -   [Symbol](#symbol)
+    -   [Punctuation](#punctuation)
+    -   [WhiteSpace](#whitespace)
+    -   [Source](#source)
+    -   [TextNode](#textnode)
+
+-   [List of Utilities](#list-of-utilities)
+
+-   [License](#license)
 
 ## CST
 
-### Node
+### `Root`
 
-Node represents any unit in NLCST hierarchy.
+`Root` ([`Parent`][parent]) houses all nodes.
 
-```
-interface Node {
-    type: string;
-    data: Data | null;
+```idl
+interface Root <: Parent {
+  type: "RootNode";
 }
 ```
 
-### Data
+### `Paragraph`
 
-Data represents data associated with any node. Data is a scope for plug-ins to store any information. Its only limitation being that each property should by stringifyable: not throw when passed to `JSON.stringify()`.
+`Paragraph` ([`Parent`][parent]) represents a self-contained unit of
+discourse in writing dealing with a particular point or idea.
 
-```
-interface Data { }
-```
-
-### Parent
-
-Parent ([Node](#node)) represents a unit in NLCST hierarchy which can have zero or more children.
-
-```
-interface Parent <: Node {
-    children: [];
+```idl
+interface Paragraph <: Parent {
+  type: "ParagraphNode";
 }
 ```
 
-### Text
+### `Sentence`
 
-Text ([Node](#node)) represents a unit in NLCST hierarchy which has value.
+`Sentence` ([`Parent`][parent]) represents grouping of grammatically
+linked words, that in principle tells a complete thought, although it
+may make little sense taken in isolation out of context.
 
-```
-interface Text <: Node {
-    value: string;
+```idl
+interface Sentence <: Parent {
+  type: "SentenceNode";
 }
 ```
 
-### RootNode
+### `Word`
 
-Root ([Parent](#parent)) represents a document.
+`Word` ([`Parent`][parent]) represents the smallest element that may
+be uttered in isolation with semantic or pragmatic content.
 
-```
-interface RootNode < Parent {
-    type: "RootNode";
+```idl
+interface Word <: Parent {
+  type: "WordNode";
 }
 ```
 
-### ParagraphNode
+### `Symbol`
 
-Paragraph ([Parent](#parent)) represents a self-contained unit of discourse in writing dealing with a particular point or idea.
+`Symbol` ([`Text`][text]) represents typographical devices like
+white space, punctuation, signs, and more, different from characters
+which represent sounds (like letters and numerals).
 
-```
-interface ParagraphNode < Parent {
-    type: "ParagraphNode";
+```idl
+interface Symbol <: Text {
+  type: "SymbolNode";
 }
 ```
 
-### SentenceNode
+### `Punctuation`
 
-Sentence ([Parent](#parent)) represents grouping of grammatically linked words, that in principle tells a complete thought, although it may make little sense taken in isolation out of context.
+`Punctuation` ([`Symbol`][symbol]) represents typographical devices
+which aid understanding and correct reading of other grammatical
+units.
 
-```
-interface SentenceNode < Parent {
-    type: "SentenceNode";
+```idl
+interface Punctuation <: Symbol {
+  type: "PunctuationNode";
 }
 ```
 
-### WordNode
+### `WhiteSpace`
 
-Word ([Parent](#parent)) represents the smallest element that may be uttered in isolation with semantic or pragmatic content.
+`WhiteSpace` ([`Symbol`][symbol]) represents typographical devices
+devoid of content, separating other grammatical units.
 
-```
-interface WordNode < Parent {
-    type: "WordNode";
+```idl
+interface WhiteSpace <: Symbol {
+  type: "WhiteSpaceNode";
 }
 ```
 
-### SymbolNode
+### `Source`
 
-Symbol ([Text](#text)) represents typographical devices like white space, punctuation, signs, and more, different from characers which represent sounds (like letters and numerals).
+`Source` ([`Text`][text]) represents an external (ungrammatical) value
+embedded into a grammatical unit: a hyperlink, a line, and such.
 
-```
-interface SymbolNode < Text {
-    type: "SymbolNode";
+```idl
+interface Source <: Symbol {
+  type: "SourceNode";
 }
 ```
 
-### PunctuationNode
+### `TextNode`
 
-Punctuation ([SymbolNode](#symbolnode)) represents typographical devices which aid understanding and correct reading of other grammatical units.
+`TextNode` ([`Text`][text]) represents actual content in an NLCST
+document: one or more characters.  Note that its `type` property
+is `TextNode`, but it is different from the asbtract [`Text`][text]
+interface.
 
-```
-interface PunctuationNode < SymbolNode {
-    type: "PunctuationNode";
-}
-```
-
-### WhiteSpaceNode
-
-White Space ([SymbolNode](#symbolnode)) represents typographical devices devoid of content, separating other grammatical units.
-
-```
-interface WhiteSpaceNode < SymbolNode {
-    type: "WhiteSpaceNode";
-}
-```
-
-### SourceNode
-
-Source ([Text](#text)) represents an external (ungrammatical) value embedded into a grammatical unit: a hyperlink, a line, and such.
-
-```
-interface SourceNode < Text {
-    type: "SourceNode";
-}
-```
-
-### TextNode
-
-Text ([Text](#text)) represents actual content in an NLCST document: one or more characters.
-
-```
+```idl
 interface TextNode < Text {
     type: "TextNode";
 }
 ```
 
-## Related
+## List of Utilities
 
-- [retext](https://github.com/wooorm/retext) — Analyse and Manipulate natural language, 20+ plug-ins.
-- [parse-latin](https://github.com/wooorm/parse-latin) — Transforms latin-script natural language into a CST;
-- [TextOM](https://github.com/wooorm/textom) — Provides an object-oriented manipulation interface to NLCST;
-- [nlcst-to-string](https://github.com/wooorm/nlcst-to-string) — Transforms a CST into a string;
-- [nlcst-to-textom](https://github.com/wooorm/nlcst-to-textom) — Transforms a CST into a [TextOM](https://github.com/wooorm/textom) object model;
-- [nlcst-test](https://github.com/wooorm/nlcst-test) — Validate an NLCST node.
+<!--lint disable list-item-spacing-->
+
+-   [`wooorm/nlcst-is-literal`](https://github.com/wooorm/nlcst-is-literal)
+    — Check whether a node is meant literally;
+-   [`wooorm/nlcst-normalize`](https://github.com/wooorm/nlcst-normalize)
+    — Normalize a word for easier comparison;
+-   [`wooorm/nlcst-search`](https://github.com/wooorm/nlcst-search)
+    — Search for patterns in an NLCST tree;
+-   [`wooorm/nlcst-to-string`](https://github.com/wooorm/nlcst-to-string)
+    — Stringify a node;
+-   [`wooorm/nlcst-test`](https://github.com/wooorm/nlcst-test)
+    — Validate a NLCST node;
+
+In addition, see [**Unist**][unist] for other utilities which
+work with **retext** nodes.
 
 ## License
 
 MIT © Titus Wormer
+
+<!--Definitions-->
+
+[unist]: https://github.com/wooorm/unist
+
+[retext]: https://github.com/wooorm/retext
+
+[parent]: https://github.com/wooorm/unist#parent
+
+[text]: https://github.com/wooorm/unist#text
+
+[symbol]: #symbol
