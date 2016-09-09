@@ -1,4 +1,4 @@
-# ![NLCST](https://cdn.rawgit.com/wooorm/nlcst/master/logo.svg)
+# ![NLCST][logo]
 
 Natural language for human and machine.
 
@@ -158,6 +158,8 @@ work with **retext** nodes.
 MIT © Titus Wormer
 
 <!--Definitions-->
+
+[logo]: https://cdn.rawgit.com/wooorm/nlcst/f677854/logo.svg
 
 [unist]: https://github.com/wooorm/unist
 
