@@ -159,16 +159,16 @@ MIT © Titus Wormer
 
 <!--Definitions-->
 
-[logo]: https://cdn.rawgit.com/wooorm/nlcst/f677854/logo.svg
+[logo]: https://cdn.rawgit.com/syntax-tree/nlcst/f677854/logo.svg
 
-[unist]: https://github.com/wooorm/unist
+[unist]: https://github.com/syntax-tree/unist
 
 [retext]: https://github.com/wooorm/retext
 
-[parent]: https://github.com/wooorm/unist#parent
+[parent]: https://github.com/syntax-tree/unist#parent
 
-[text]: https://github.com/wooorm/unist#text
+[text]: https://github.com/syntax-tree/unist#text
 
 [symbol]: #symbol
 
-[changelog]: https://github.com/wooorm/nlcst/releases
+[changelog]: https://github.com/syntax-tree/nlcst/releases
