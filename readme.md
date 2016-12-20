@@ -137,17 +137,15 @@ interface TextNode < Text {
 
 ## List of Utilities
 
-<!--lint disable list-item-spacing-->
-
--   [`wooorm/nlcst-is-literal`](https://github.com/wooorm/nlcst-is-literal)
+-   [`nlcst-is-literal`](https://github.com/syntax-tree/nlcst-is-literal)
     — Check whether a node is meant literally;
--   [`wooorm/nlcst-normalize`](https://github.com/wooorm/nlcst-normalize)
+-   [`nlcst-normalize`](https://github.com/syntax-tree/nlcst-normalize)
     — Normalize a word for easier comparison;
--   [`wooorm/nlcst-search`](https://github.com/wooorm/nlcst-search)
+-   [`nlcst-search`](https://github.com/syntax-tree/nlcst-search)
     — Search for patterns in an NLCST tree;
--   [`wooorm/nlcst-to-string`](https://github.com/wooorm/nlcst-to-string)
+-   [`nlcst-to-string`](https://github.com/syntax-tree/nlcst-to-string)
     — Stringify a node;
--   [`wooorm/nlcst-test`](https://github.com/wooorm/nlcst-test)
+-   [`nlcst-test`](https://github.com/syntax-tree/nlcst-test)
     — Validate a NLCST node;
 
 In addition, see [**Unist**][unist] for other utilities which
