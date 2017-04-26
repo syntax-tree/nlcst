@@ -1,5 +1,9 @@
 # ![NLCST][logo]
 
+**N**atural **L**anguage **C**oncrete **S**yntax **T**ree format.
+
+* * *
+
 Natural language for human and machine.
 
 **NLCST** discloses the parts of natural language as a concrete syntax
