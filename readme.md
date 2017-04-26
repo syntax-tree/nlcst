@@ -18,6 +18,7 @@ This document describes version 1.0.0 of **NLCST**.
 
 ## Table of Contents
 
+*   [List of Utilities](#list-of-utilities)
 *   [CST](#cst)
     *   [Root](#root)
     *   [Paragraph](#paragraph)
@@ -28,8 +29,23 @@ This document describes version 1.0.0 of **NLCST**.
     *   [WhiteSpace](#whitespace)
     *   [Source](#source)
     *   [TextNode](#textnode)
-*   [List of Utilities](#list-of-utilities)
 *   [License](#license)
+
+## List of Utilities
+
+*   [`nlcst-is-literal`](https://github.com/syntax-tree/nlcst-is-literal)
+    — Check whether a node is meant literally;
+*   [`nlcst-normalize`](https://github.com/syntax-tree/nlcst-normalize)
+    — Normalize a word for easier comparison;
+*   [`nlcst-search`](https://github.com/syntax-tree/nlcst-search)
+    — Search for patterns in an NLCST tree;
+*   [`nlcst-to-string`](https://github.com/syntax-tree/nlcst-to-string)
+    — Stringify a node;
+*   [`nlcst-test`](https://github.com/syntax-tree/nlcst-test)
+    — Validate a NLCST node;
+
+In addition, see [**Unist**][unist] for other utilities which
+work with **retext** nodes.
 
 ## CST
 
@@ -135,22 +151,6 @@ interface TextNode < Text {
     type: "TextNode";
 }
 ```
-
-## List of Utilities
-
-*   [`nlcst-is-literal`](https://github.com/syntax-tree/nlcst-is-literal)
-    — Check whether a node is meant literally;
-*   [`nlcst-normalize`](https://github.com/syntax-tree/nlcst-normalize)
-    — Normalize a word for easier comparison;
-*   [`nlcst-search`](https://github.com/syntax-tree/nlcst-search)
-    — Search for patterns in an NLCST tree;
-*   [`nlcst-to-string`](https://github.com/syntax-tree/nlcst-to-string)
-    — Stringify a node;
-*   [`nlcst-test`](https://github.com/syntax-tree/nlcst-test)
-    — Validate a NLCST node;
-
-In addition, see [**Unist**][unist] for other utilities which
-work with **retext** nodes.
 
 ## License
 
