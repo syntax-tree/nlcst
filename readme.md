@@ -19,7 +19,6 @@ This document describes version 1.0.0 of **NLCST**.
 ## Table of Contents
 
 *   [CST](#cst)
-
     *   [Root](#root)
     *   [Paragraph](#paragraph)
     *   [Sentence](#sentence)
@@ -29,9 +28,7 @@ This document describes version 1.0.0 of **NLCST**.
     *   [WhiteSpace](#whitespace)
     *   [Source](#source)
     *   [TextNode](#textnode)
-
 *   [List of Utilities](#list-of-utilities)
-
 *   [License](#license)
 
 ## CST
