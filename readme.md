@@ -13,8 +13,8 @@ exact replica of the original document can be re-created.
 **NLCST** is a subset of [**Unist**][unist], and implemented by
 [**retext**][retext].
 
-This document describes version 1.0.0 of **NLCST**.
-[Changelog »][changelog]
+This document may not be released. See [releases][] for released
+documents. The latest released version is [`1.0.0`][latest].
 
 ## Table of Contents
 
@@ -179,7 +179,9 @@ MIT © Titus Wormer
 
 [symbol]: #symbol
 
-[changelog]: https://github.com/syntax-tree/nlcst/releases
+[releases]: https://github.com/syntax-tree/nlcst/releases
+
+[latest]: https://github.com/syntax-tree/nlcst/releases/tag/1.0.0
 
 [retext]: https://github.com/wooorm/retext
 
