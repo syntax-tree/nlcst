@@ -167,7 +167,7 @@ MIT © Titus Wormer
 
 <!--Definitions-->
 
-[logo]: https://cdn.rawgit.com/syntax-tree/nlcst/f677854/logo.svg
+[logo]: https://cdn.rawgit.com/syntax-tree/nlcst/d9fe388/logo.svg
 
 [unist]: https://github.com/syntax-tree/unist
 
