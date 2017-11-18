@@ -209,11 +209,7 @@ Thanks to [**@nwtn**](https://github.com/nwtn),
 
 [latest]: https://github.com/syntax-tree/nlcst/releases/tag/1.0.1
 
-[retext]: https://github.com/wooorm/retext
-
 [vfile]: https://github.com/vfile/vfile
-
-[unist]: https://github.com/syntax-tree/unist
 
 [hast]: https://github.com/syntax-tree/hast
 
