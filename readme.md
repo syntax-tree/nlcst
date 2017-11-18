@@ -14,7 +14,7 @@ exact replica of the original document can be re-created.
 [**retext**][retext].
 
 This document may not be released. See [releases][] for released
-documents. The latest released version is [`1.0.0`][latest].
+documents. The latest released version is [`1.0.1`][latest].
 
 ## Table of Contents
 
@@ -207,7 +207,7 @@ Thanks to [**@nwtn**](https://github.com/nwtn),
 
 [releases]: https://github.com/syntax-tree/nlcst/releases
 
-[latest]: https://github.com/syntax-tree/nlcst/releases/tag/1.0.0
+[latest]: https://github.com/syntax-tree/nlcst/releases/tag/1.0.1
 
 [retext]: https://github.com/wooorm/retext
 
