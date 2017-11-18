@@ -31,6 +31,7 @@ documents. The latest released version is [`1.0.0`][latest].
     *   [TextNode](#textnode)
 *   [Related](#related)
 *   [Contribute](#contribute)
+*   [Acknowledgments](#acknowledgments)
 *   [License](#license)
 
 ## List of Utilities
@@ -175,6 +176,16 @@ Want to chat with the community and contributors?  Join us in [Gitter][chat]!
 Have an idea for a cool new utility or tool?  That’s great!  If you want
 feedback, help, or just to share it with the world you can do so by creating
 an issue in the [`syntax-tree/ideas`][ideas] repository!
+
+## Acknowledgments
+
+The initial release of this project was authored by
+[**@wooorm**](https://github.com/wooorm).
+
+Thanks to [**@nwtn**](https://github.com/nwtn),
+[**@tmcw**](https://github.com/tmcw),
+[**@muraken720**](https://github.com/muraken720), and
+[**@dozoisch**](https://github.com/dozoisch) for contributing commits since!
 
 ## License
 
