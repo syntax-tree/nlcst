@@ -189,7 +189,7 @@ Thanks to [**@nwtn**](https://github.com/nwtn),
 
 ## License
 
-MIT © Titus Wormer
+[CC-BY-4.0][license] © [Titus Wormer][author]
 
 <!--Definitions-->
 
@@ -226,3 +226,7 @@ MIT © Titus Wormer
 [ideas]: https://github.com/syntax-tree/ideas
 
 [chat]: https://gitter.im/wooorm/retext
+
+[license]: https://creativecommons.org/licenses/by/4.0/
+
+[author]: http://wooorm.com
