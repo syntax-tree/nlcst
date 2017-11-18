@@ -41,9 +41,9 @@ and help others.
     — Topics relating to [**unified**][unified] in general
 *   [**syntax-tree**](https://gitter.im/syntax-tree/Lobby)
     — Topics relating to [**syntax-tree**][syntax-tree] and [**unist**][unist]
-*   [**remark**](https://gitter.im/wooorm/remark)
-    — Topics relating to the [**remark**][remark] ecosystem, markdown,
-    and [**mdast**][mdast]
+*   [**retext**](https://gitter.im/wooorm/retext)
+    — Topics relating to the [**retext**][retext] ecosystem, natural language,
+    and [**nlcst**][nlcst]
 
 ## Contributions
 
@@ -103,25 +103,17 @@ prevent you from doing unnecessary work.
 
 [coc]: https://github.com/unifiedjs/unified/blob/master/code-of-conduct.md
 
-[vfile]: https://github.com/vfile
-
 [syntax-tree]: https://github.com/syntax-tree
 
 [unist]: https://github.com/syntax-tree/unist
 
-[mdast]: https://github.com/syntax-tree/mdast
-
 [nlcst]: https://github.com/syntax-tree/nlcst
-
-[hast]: https://github.com/syntax-tree/hast
 
 [unified]: https://github.com/unifiedjs/unified
 
 [remark]: https://github.com/wooorm/remark
 
 [retext]: https://github.com/wooorm/retext
-
-[rehype]: https://github.com/wooorm/rehype
 
 [mdast-util-to-hast]: https://github.com/syntax-tree/mdast-util-to-hast
 
