@@ -197,7 +197,7 @@ Thanks to [**@nwtn**](https://github.com/nwtn),
 
 [unist]: https://github.com/syntax-tree/unist
 
-[retext]: https://github.com/wooorm/retext
+[retext]: https://github.com/retextjs/retext
 
 [parent]: https://github.com/syntax-tree/unist#parent
 
@@ -221,7 +221,7 @@ Thanks to [**@nwtn**](https://github.com/nwtn),
 
 [ideas]: https://github.com/syntax-tree/ideas
 
-[chat]: https://gitter.im/wooorm/retext
+[chat]: https://gitter.im/retextjs/Lobby
 
 [license]: https://creativecommons.org/licenses/by/4.0/
 

@@ -41,7 +41,7 @@ and help others.
     — Topics relating to [**unified**][unified] in general
 *   [**syntax-tree**](https://gitter.im/syntax-tree/Lobby)
     — Topics relating to [**syntax-tree**][syntax-tree] and [**unist**][unist]
-*   [**retext**](https://gitter.im/wooorm/retext)
+*   [**retext**](https://gitter.im/retextjs/Lobby)
     — Topics relating to the [**retext**][retext] ecosystem, natural language,
     and [**nlcst**][nlcst]
 
@@ -111,12 +111,12 @@ prevent you from doing unnecessary work.
 
 [unified]: https://github.com/unifiedjs/unified
 
-[remark]: https://github.com/wooorm/remark
+[remark]: https://github.com/remarkjs/remark
 
-[retext]: https://github.com/wooorm/retext
+[retext]: https://github.com/retextjs/retext
 
 [mdast-util-to-hast]: https://github.com/syntax-tree/mdast-util-to-hast
 
-[remark-rehype]: https://github.com/wooorm/remark-rehype
+[remark-rehype]: https://github.com/remarkjs/remark-rehype
 
 [unit-test]: https://twitter.com/sindresorhus/status/579306280495357953
