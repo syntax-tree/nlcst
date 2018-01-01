@@ -146,7 +146,7 @@ interface Source <: Symbol {
 
 `TextNode` ([`Text`][text]) represents actual content in an NLCST
 document: one or more characters.  Note that its `type` property
-is `TextNode`, but it is different from the asbtract [`Text`][text]
+is `TextNode`, but it is different from the abstract [`Text`][text]
 interface.
 
 ```idl
