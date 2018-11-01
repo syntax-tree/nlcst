@@ -193,7 +193,7 @@ Thanks to [**@nwtn**](https://github.com/nwtn),
 
 <!--Definitions-->
 
-[logo]: https://cdn.rawgit.com/syntax-tree/nlcst/d9fe388/logo.svg
+[logo]: https://raw.githubusercontent.com/syntax-tree/nlcst/0f9cce5/logo.svg?sanitize=true
 
 [unist]: https://github.com/syntax-tree/unist
 
