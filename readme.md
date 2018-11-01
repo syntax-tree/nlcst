@@ -13,8 +13,8 @@ exact replica of the original document can be re-created.
 **NLCST** is a subset of [**Unist**][unist], and implemented by
 [**retext**][retext].
 
-This document may not be released. See [releases][] for released
-documents. The latest released version is [`1.0.1`][latest].
+This document may not be released.  See [releases][] for released
+documents.  The latest released version is [`1.0.1`][latest].
 
 ## Table of Contents
 
