@@ -10,7 +10,7 @@ It implements the [**unist**][unist] spec.
 
 This document may not be released.
 See [releases][] for released documents.
-The latest released version is [`1.0.1`][latest].
+The latest released version is [`1.0.2`][latest].
 
 ## Table of Contents
 
@@ -303,7 +303,7 @@ for contributing to nlcst and related projects!
 
 [releases]: https://github.com/syntax-tree/nlcst/releases
 
-[latest]: https://github.com/syntax-tree/nlcst/releases/tag/1.0.1
+[latest]: https://github.com/syntax-tree/nlcst/releases/tag/1.0.2
 
 [list-of-utilities]: #list-of-utilities
 
