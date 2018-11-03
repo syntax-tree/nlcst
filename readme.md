@@ -262,7 +262,7 @@ By interacting with this repository, organisation, or community you agree to
 abide by its terms.
 
 Want to chat with the community and contributors?
-Join us in [Gitter][chat]!
+Join us in [spectrum][chat]!
 
 Have an idea for a cool new utility or tool?
 That’s great!
@@ -299,7 +299,7 @@ for contributing to nlcst and related projects!
 
 [ideas]: https://github.com/syntax-tree/ideas
 
-[chat]: https://gitter.im/retextjs/retext
+[chat]: https://spectrum.chat/unified/retext
 
 [releases]: https://github.com/syntax-tree/nlcst/releases
 

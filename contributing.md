@@ -34,14 +34,14 @@ help you faster.
 
 ## Questions
 
-Please chat and ask questions on Gitter!  Jump in there and lurk, talk to us,
+Please chat and ask questions on spectrum!  Jump in there and lurk, talk to us,
 and help others.
 
-*   [**unified**](https://gitter.im/unifiedjs/Lobby)
+*   [**unified**](https://spectrum.chat/unified/unified)
     — Topics relating to [**unified**][unified] in general
-*   [**syntax-tree**](https://gitter.im/syntax-tree/Lobby)
+*   [**syntax-tree**](https://spectrum.chat/unified/syntax-tree)
     — Topics relating to [**syntax-tree**][syntax-tree] and [**unist**][unist]
-*   [**retext**](https://gitter.im/retextjs/Lobby)
+*   [**retext**](https://spectrum.chat/unified/retext)
     — Topics relating to the [**retext**][retext] ecosystem, natural language,
     and [**nlcst**][nlcst]
 
