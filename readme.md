@@ -4,8 +4,8 @@
 
 * * *
 
-**nlcst** is a specification for representing natural language in a
-[syntax tree][syntax-tree].
+**nlcst** is a specification for representing natural language in a [syntax
+tree][syntax-tree].
 It implements the [**unist**][unist] spec.
 
 This document may not be released.
@@ -37,10 +37,10 @@ The latest released version is [`1.0.2`][latest].
 
 ## Introduction
 
-This document defines a format for representing natural language as a
-[concrete syntax tree][syntax-tree].
-Development of nlcst started in May 2014, in the now deprecated
-[textom][] project for [retext][], before [unist][] existed.
+This document defines a format for representing natural language as a [concrete
+syntax tree][syntax-tree].
+Development of nlcst started in May 2014, in the now deprecated [textom][]
+project for [retext][], before [unist][] existed.
 This specification is written in a [Web IDL][webidl]-like grammar.
 
 ### Where this specification fits
@@ -51,8 +51,8 @@ nlcst extends [unist][], a format for syntax trees, to benefit from its
 nlcst relates to [JavaScript][] in that it has an [ecosystem of
 utilities][list-of-utilities] for working with compliant syntax trees in
 JavaScript.
-However, nlcst is not limited to JavaScript and can be used in other
-programming languages.
+However, nlcst is not limited to JavaScript and can be used in other programming
+languages.
 
 nlcst relates to the [unified][] and [retext][] projects in that nlcst syntax
 trees are used throughout their ecosystems.
@@ -125,14 +125,14 @@ interface Sentence <: Parent {
 }
 ```
 
-**Sentence** ([**Parent**][dfn-parent])  represents grouping of grammatically
+**Sentence** ([**Parent**][dfn-parent]) represents grouping of grammatically
 linked words, that in principle tells a complete thought, although it may make
 little sense taken in isolation out of context.
 
 **Sentence** can be used in a [**paragraph**][dfn-paragraph] node.
 It can contain [**word**][dfn-word], [**symbol**][dfn-symbol],
-[**punctuation**][dfn-punctuation], [**whitespace**][dfn-whitespace],
-and [**source**][dfn-source] nodes.
+[**punctuation**][dfn-punctuation], [**whitespace**][dfn-whitespace], and
+[**source**][dfn-source] nodes.
 
 ### `Word`
 
@@ -143,8 +143,8 @@ interface Word <: Parent {
 }
 ```
 
-**Word** ([**Parent**][dfn-parent])  represents the smallest element that may
-be uttered in isolation with semantic or pragmatic content.
+**Word** ([**Parent**][dfn-parent]) represents the smallest element that may be
+uttered in isolation with semantic or pragmatic content.
 
 **Word** can be used in a [**sentence**][dfn-sentence] node.
 It can contain [**text**][dfn-text], [**symbol**][dfn-symbol],
