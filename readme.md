@@ -244,7 +244,7 @@ See the [unist list of utilities][utilities] for more utilities.
 *   **unist**:
     [Universal Syntax Tree][unist].
     T. Wormer; et al.
-*   **JavaScript**
+*   **JavaScript**:
     [ECMAScript Language Specification][javascript].
     Ecma International.
 *   **Web IDL**:
