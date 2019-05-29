@@ -254,20 +254,17 @@ See the [unist list of utilities][utilities] for more utilities.
 
 ## Contribute
 
-**nlcst** is built by people just like you!
-Check out [`contributing.md`][contributing] for ways to get started.
+See [`contributing.md`][contributing] in [`syntax-tree/.github`][health] for
+ways to get started.
+See [`support.md`][support] for ways to get help.
+Ideas for new utilities and tools can be posted in [syntax-tree/ideas][ideas].
+
+A curated list of awesome syntax-tree, unist, hast, mdast, and nlcst resources
+can be found in [awesome syntax-tree][awesome].
 
 This project has a [Code of Conduct][coc].
 By interacting with this repository, organisation, or community you agree to
 abide by its terms.
-
-Want to chat with the community and contributors?
-Join us in [spectrum][chat]!
-
-Have an idea for a cool new utility or tool?
-That’s great!
-If you want feedback, help, or just to share it with the world you can do so by
-creating an issue in the [`syntax-tree/ideas`][ideas] repository!
 
 ## Acknowledgments
 
@@ -287,19 +284,23 @@ for contributing to nlcst and related projects!
 
 <!--Definitions-->
 
-[contributing]: contributing.md
-
-[coc]: code-of-conduct.md
-
 [license]: https://creativecommons.org/licenses/by/4.0/
 
 [author]: https://wooorm.com
 
 [logo]: https://raw.githubusercontent.com/syntax-tree/nlcst/0f9cce5/logo.svg?sanitize=true
 
-[ideas]: https://github.com/syntax-tree/ideas
+[health]: https://github.com/syntax-tree/.github
 
-[chat]: https://spectrum.chat/unified/retext
+[contributing]: https://github.com/syntax-tree/.github/blob/master/contributing.md
+
+[support]: https://github.com/syntax-tree/.github/blob/master/support.md
+
+[coc]: https://github.com/syntax-tree/.github/blob/master/code-of-conduct.md
+
+[awesome]: https://github.com/syntax-tree/awesome-syntax-tree
+
+[ideas]: https://github.com/syntax-tree/ideas
 
 [releases]: https://github.com/syntax-tree/nlcst/releases
 
