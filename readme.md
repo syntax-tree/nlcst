@@ -68,7 +68,7 @@ interface Parent <: UnistParent {
 ```
 
 **Parent** ([**UnistParent**][dfn-unist-parent]) represents a node in nlcst
-containing other nodes (said to be [_children_][term-child]).
+containing other nodes (said to be [*children*][term-child]).
 
 Its content is limited to only other nlcst content.
 
@@ -95,8 +95,8 @@ interface Root <: Parent {
 
 **Root** ([**Parent**][dfn-parent]) represents a document.
 
-**Root** can be used as the [_root_][term-root] of a [_tree_][term-tree], never
-as a [_child_][term-child].
+**Root** can be used as the [*root*][term-root] of a [*tree*][term-tree], never
+as a [*child*][term-child].
 Its content model is not limited, it can contain any nlcst content, with the
 restriction that all content must be of the same category.
 
