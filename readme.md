@@ -6,7 +6,7 @@
 
 **nlcst** is a specification for representing natural language in a [syntax
 tree][syntax-tree].
-It implements the [**unist**][unist] spec.
+It implements the **[unist][]** spec.
 
 This document may not be released.
 See [releases][] for released documents.
@@ -188,7 +188,7 @@ interface WhiteSpace <: Literal {
 ```
 
 **WhiteSpace** ([**Literal**][dfn-literal]) represents typographical devices
-devoid of content, separating other grammatical units.
+devoid of content, separating other units.
 
 **WhiteSpace** can be used in [**root**][dfn-root],
 [**paragraph**][dfn-paragraph], or [**sentence**][dfn-sentence] nodes.
@@ -202,7 +202,7 @@ interface Source <: Literal {
 ```
 
 **Source** ([**Literal**][dfn-literal]) represents an external (ungrammatical)
-value embedded into a grammatical unit: a hyperlink, a line, and such.
+value embedded into a grammatical unit: a hyperlink, code, and such.
 
 **Source** can be used in [**root**][dfn-root], [**paragraph**][dfn-paragraph],
 [**sentence**][dfn-sentence], or [**word**][dfn-word] nodes.
@@ -224,7 +224,7 @@ documents: one or more characters.
 
 See the [unist glossary][glossary].
 
-## List of Utilities
+## List of utilities
 
 See the [unist list of utilities][utilities] for more utilities.
 
@@ -257,13 +257,13 @@ See the [unist list of utilities][utilities] for more utilities.
 See [`contributing.md`][contributing] in [`syntax-tree/.github`][health] for
 ways to get started.
 See [`support.md`][support] for ways to get help.
-Ideas for new utilities and tools can be posted in [syntax-tree/ideas][ideas].
+Ideas for new utilities and tools can be posted in [`syntax-tree/ideas`][ideas].
 
-A curated list of awesome syntax-tree, unist, hast, mdast, and nlcst resources
-can be found in [awesome syntax-tree][awesome].
+A curated list of awesome syntax-tree, unist, mdast, hast, xast, and nlcst
+resources can be found in [awesome syntax-tree][awesome].
 
-This project has a [Code of Conduct][coc].
-By interacting with this repository, organisation, or community you agree to
+This project has a [code of conduct][coc].
+By interacting with this repository, organization, or community you agree to
 abide by its terms.
 
 ## Acknowledgments
