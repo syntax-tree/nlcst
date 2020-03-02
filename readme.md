@@ -228,16 +228,26 @@ See the [unist glossary][glossary].
 
 See the [unist list of utilities][utilities] for more utilities.
 
+*   [`nlcst-affix-emoticon-modifier`](https://github.com/syntax-tree/nlcst-affix-emoticon-modifier)
+    — merge affix emoticons into the previous sentence
+*   [`nlcst-emoji-modifier`](https://github.com/syntax-tree/nlcst-emoji-modifier)
+    — support emoji
+*   [`nlcst-emoticon-modifier`](https://github.com/syntax-tree/nlcst-emoticon-modifier)
+    — support emoticons
 *   [`nlcst-is-literal`](https://github.com/syntax-tree/nlcst-is-literal)
-    — Check whether a node is meant literally
+    — check whether a node is meant literally
 *   [`nlcst-normalize`](https://github.com/syntax-tree/nlcst-normalize)
-    — Normalize a word for easier comparison
+    — normalize a word for easier comparison
 *   [`nlcst-search`](https://github.com/syntax-tree/nlcst-search)
-    — Search for patterns in nlcst trees
+    — search for patterns
 *   [`nlcst-to-string`](https://github.com/syntax-tree/nlcst-to-string)
-    — Stringify a node
+    — serialize a node
 *   [`nlcst-test`](https://github.com/syntax-tree/nlcst-test)
-    — Validate a node
+    — validate a node
+*   [`mdast-util-to-nlcst`](https://github.com/syntax-tree/mdast-util-to-nlcst)
+    — transform mdast to nlcst
+*   [`hast-util-to-nlcst`](https://github.com/syntax-tree/hast-util-to-nlcst)
+    — transform hast to nlcst
 
 ## Related
 
