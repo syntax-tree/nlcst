@@ -2,7 +2,7 @@
 
 **N**atural **L**anguage **C**oncrete **S**yntax **T**ree format.
 
-* * *
+***
 
 **nlcst** is a specification for representing natural language in a [syntax
 tree][syntax-tree].
@@ -29,7 +29,8 @@ The latest released version is [`1.0.2`][latest].
     *   [`Source`](#source)
     *   [`Text`](#text)
 *   [Glossary](#glossary)
-*   [List of Utilities](#list-of-utilities)
+*   [List of utilities](#list-of-utilities)
+*   [Related](#related)
 *   [References](#references)
 *   [Contribute](#contribute)
 *   [Acknowledgments](#acknowledgments)
