@@ -308,7 +308,7 @@ for contributing to nlcst and related projects!
 
 [author]: https://wooorm.com
 
-[logo]: https://raw.githubusercontent.com/syntax-tree/nlcst/0f9cce5/logo.svg?sanitize=true
+[logo]: https://raw.githubusercontent.com/syntax-tree/nlcst/a89561d/logo.svg?sanitize=true
 
 [health]: https://github.com/syntax-tree/.github
 
