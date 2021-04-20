@@ -64,7 +64,7 @@ trees are used throughout their ecosystems.
 
 ```idl
 interface Parent <: UnistParent {
-  children: [Paragraph | Sentence | Word | Symbol | Punctuation | WhiteSpace | Source]
+  children: [Paragraph | Sentence | Word | Symbol | Punctuation | WhiteSpace | Source | Text]
 }
 ```
 
