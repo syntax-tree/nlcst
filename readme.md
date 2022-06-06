@@ -12,7 +12,7 @@ This document may not be released.
 See [releases][] for released documents.
 The latest released version is [`1.0.2`][latest].
 
-## Table of Contents
+## Contents
 
 *   [Introduction](#introduction)
     *   [Where this specification fits](#where-this-specification-fits)
