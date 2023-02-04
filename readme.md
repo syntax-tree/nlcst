@@ -16,6 +16,7 @@ The latest released version is [`1.0.2`][latest].
 
 *   [Introduction](#introduction)
     *   [Where this specification fits](#where-this-specification-fits)
+*   [Types](#types)
 *   [Nodes](#nodes)
     *   [`Parent`](#parent)
     *   [`Literal`](#literal)
@@ -57,6 +58,15 @@ languages.
 
 nlcst relates to the [unified][] and [retext][] projects in that nlcst syntax
 trees are used throughout their ecosystems.
+
+## Types
+
+If you are using TypeScript, you can use the unist types by installing them
+with npm:
+
+```sh
+npm install @types/nlcst
+```
 
 ## Nodes
 
