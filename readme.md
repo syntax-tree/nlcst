@@ -90,7 +90,7 @@ Its `value` field is a `string`.
 
 ```idl
 interface Root <: Parent {
-  type: "RootNode"
+  type: 'RootNode'
 }
 ```
 
@@ -105,8 +105,8 @@ restriction that all content must be of the same category.
 
 ```idl
 interface Paragraph <: Parent {
-  type: "ParagraphNode"
-  children: [Sentence | WhiteSpace | Source]
+  type: 'ParagraphNode'
+  children: [Sentence | Source | WhiteSpace]
 }
 ```
 
@@ -121,8 +121,8 @@ and [**source**][dfn-source] nodes.
 
 ```idl
 interface Sentence <: Parent {
-  type: "SentenceNode"
-  children: [Word | Symbol | Punctuation | WhiteSpace | Source]
+  type: 'SentenceNode'
+  children: [Punctuation | Source | Symbol | WhiteSpace | Word]
 }
 ```
 
@@ -139,8 +139,8 @@ It can contain [**word**][dfn-word], [**symbol**][dfn-symbol],
 
 ```idl
 interface Word <: Parent {
-  type: "WordNode"
-  children: [Text | Symbol | Punctuation | Source]
+  type: 'WordNode'
+  children: [Punctuation | Source | Symbol | Text]
 }
 ```
 
@@ -155,7 +155,7 @@ It can contain [**text**][dfn-text], [**symbol**][dfn-symbol],
 
 ```idl
 interface Symbol <: Literal {
-  type: "SymbolNode"
+  type: 'SymbolNode'
 }
 ```
 
@@ -170,7 +170,7 @@ nodes.
 
 ```idl
 interface Punctuation <: Literal {
-  type: "PunctuationNode"
+  type: 'PunctuationNode'
 }
 ```
 
@@ -184,7 +184,7 @@ which aid understanding and correct reading of other grammatical units.
 
 ```idl
 interface WhiteSpace <: Literal {
-  type: "WhiteSpaceNode"
+  type: 'WhiteSpaceNode'
 }
 ```
 
@@ -198,7 +198,7 @@ devoid of content, separating other units.
 
 ```idl
 interface Source <: Literal {
-  type: "SourceNode"
+  type: 'SourceNode'
 }
 ```
 
@@ -212,7 +212,7 @@ value embedded into a grammatical unit: a hyperlink, code, and such.
 
 ```idl
 interface Text <: Literal {
-  type: "TextNode"
+  type: 'TextNode'
 }
 ```
 
