@@ -17,18 +17,19 @@ The latest released version is [`1.0.2`][latest].
 *   [Introduction](#introduction)
     *   [Where this specification fits](#where-this-specification-fits)
 *   [Types](#types)
-*   [Nodes](#nodes)
-    *   [`Parent`](#parent)
+*   [Nodes (abstract)](#nodes-abstract)
     *   [`Literal`](#literal)
-    *   [`Root`](#root)
+    *   [`Parent`](#parent)
+*   [Nodes](#nodes)
     *   [`Paragraph`](#paragraph)
-    *   [`Sentence`](#sentence)
-    *   [`Word`](#word)
-    *   [`Symbol`](#symbol)
     *   [`Punctuation`](#punctuation)
-    *   [`WhiteSpace`](#whitespace)
+    *   [`Root`](#root)
+    *   [`Sentence`](#sentence)
     *   [`Source`](#source)
+    *   [`Symbol`](#symbol)
     *   [`Text`](#text)
+    *   [`WhiteSpace`](#whitespace)
+    *   [`Word`](#word)
 *   [Glossary](#glossary)
 *   [List of utilities](#list-of-utilities)
 *   [Related](#related)
@@ -61,27 +62,14 @@ trees are used throughout their ecosystems.
 
 ## Types
 
-If you are using TypeScript, you can use the unist types by installing them
+If you are using TypeScript, you can use the nlcst types by installing them
 with npm:
 
 ```sh
 npm install @types/nlcst
 ```
 
-## Nodes
-
-### `Parent`
-
-```idl
-interface Parent <: UnistParent {
-  children: [Paragraph | Sentence | Word | Symbol | Punctuation | WhiteSpace | Source | Text]
-}
-```
-
-**Parent** ([**UnistParent**][dfn-unist-parent]) represents a node in nlcst
-containing other nodes (said to be [*children*][term-child]).
-
-Its content is limited to only other nlcst content.
+## Nodes (abstract)
 
 ### `Literal`
 
@@ -96,20 +84,20 @@ containing a value.
 
 Its `value` field is a `string`.
 
-### `Root`
+### `Parent`
 
 ```idl
-interface Root <: Parent {
-  type: 'RootNode'
+interface Parent <: UnistParent {
+  children: [Paragraph | Punctuation | Sentence | Source | Symbol | Text | WhiteSpace | Word]
 }
 ```
 
-**Root** ([**Parent**][dfn-parent]) represents a document.
+**Parent** ([**UnistParent**][dfn-unist-parent]) represents a node in nlcst
+containing other nodes (said to be [*children*][term-child]).
 
-**Root** can be used as the [*root*][term-root] of a [*tree*][term-tree], never
-as a [*child*][term-child].
-Its content model is not limited, it can contain any nlcst content, with the
-restriction that all content must be of the same category.
+Its content is limited to only other nlcst content.
+
+## Nodes
 
 ### `Paragraph`
 
@@ -126,6 +114,35 @@ with a particular point or idea.
 **Paragraph** can be used in a [**root**][dfn-root] node.
 It can contain [**sentence**][dfn-sentence], [**whitespace**][dfn-whitespace],
 and [**source**][dfn-source] nodes.
+
+### `Punctuation`
+
+```idl
+interface Punctuation <: Literal {
+  type: 'PunctuationNode'
+}
+```
+
+**Punctuation** ([**Literal**][dfn-literal]) represents typographical devices
+which aid understanding and correct reading of other grammatical units.
+
+**Punctuation** can be used in [**sentence**][dfn-sentence] or
+[**word**][dfn-word] nodes.
+
+### `Root`
+
+```idl
+interface Root <: Parent {
+  type: 'RootNode'
+}
+```
+
+**Root** ([**Parent**][dfn-parent]) represents a document.
+
+**Root** can be used as the [*root*][term-root] of a [*tree*][term-tree], never
+as a [*child*][term-child].
+Its content model is not limited, it can contain any nlcst content, with the
+restriction that all content must be of the same category.
 
 ### `Sentence`
 
@@ -145,21 +162,19 @@ It can contain [**word**][dfn-word], [**symbol**][dfn-symbol],
 [**punctuation**][dfn-punctuation], [**whitespace**][dfn-whitespace], and
 [**source**][dfn-source] nodes.
 
-### `Word`
+### `Source`
 
 ```idl
-interface Word <: Parent {
-  type: 'WordNode'
-  children: [Punctuation | Source | Symbol | Text]
+interface Source <: Literal {
+  type: 'SourceNode'
 }
 ```
 
-**Word** ([**Parent**][dfn-parent]) represents the smallest element that may be
-uttered in isolation with semantic or pragmatic content.
+**Source** ([**Literal**][dfn-literal]) represents an external (ungrammatical)
+value embedded into a grammatical unit: a hyperlink, code, and such.
 
-**Word** can be used in a [**sentence**][dfn-sentence] node.
-It can contain [**text**][dfn-text], [**symbol**][dfn-symbol],
-[**punctuation**][dfn-punctuation], and [**source**][dfn-source] nodes.
+**Source** can be used in [**root**][dfn-root], [**paragraph**][dfn-paragraph],
+[**sentence**][dfn-sentence], or [**word**][dfn-word] nodes.
 
 ### `Symbol`
 
@@ -176,19 +191,18 @@ white space, or punctuation.
 **Symbol** can be used in [**sentence**][dfn-sentence] or [**word**][dfn-word]
 nodes.
 
-### `Punctuation`
+### `Text`
 
 ```idl
-interface Punctuation <: Literal {
-  type: 'PunctuationNode'
+interface Text <: Literal {
+  type: 'TextNode'
 }
 ```
 
-**Punctuation** ([**Literal**][dfn-literal]) represents typographical devices
-which aid understanding and correct reading of other grammatical units.
+**Text** ([**Literal**][dfn-literal]) represents actual content in nlcst
+documents: one or more characters.
 
-**Punctuation** can be used in [**sentence**][dfn-sentence] or
-[**word**][dfn-word] nodes.
+**Text** can be used in [**word**][dfn-word] nodes.
 
 ### `WhiteSpace`
 
@@ -204,32 +218,21 @@ devoid of content, separating other units.
 **WhiteSpace** can be used in [**root**][dfn-root],
 [**paragraph**][dfn-paragraph], or [**sentence**][dfn-sentence] nodes.
 
-### `Source`
+### `Word`
 
 ```idl
-interface Source <: Literal {
-  type: 'SourceNode'
+interface Word <: Parent {
+  type: 'WordNode'
+  children: [Punctuation | Source | Symbol | Text]
 }
 ```
 
-**Source** ([**Literal**][dfn-literal]) represents an external (ungrammatical)
-value embedded into a grammatical unit: a hyperlink, code, and such.
+**Word** ([**Parent**][dfn-parent]) represents the smallest element that may be
+uttered in isolation with semantic or pragmatic content.
 
-**Source** can be used in [**root**][dfn-root], [**paragraph**][dfn-paragraph],
-[**sentence**][dfn-sentence], or [**word**][dfn-word] nodes.
-
-### `Text`
-
-```idl
-interface Text <: Literal {
-  type: 'TextNode'
-}
-```
-
-**Text** ([**Literal**][dfn-literal]) represents actual content in nlcst
-documents: one or more characters.
-
-**Text** can be used in [**word**][dfn-word] nodes.
+**Word** can be used in a [**sentence**][dfn-sentence] node.
+It can contain [**text**][dfn-text], [**symbol**][dfn-symbol],
+[**punctuation**][dfn-punctuation], and [**source**][dfn-source] nodes.
 
 ## Glossary
 
