@@ -1,28 +1,28 @@
 {
-  "name": "nlcst",
-  "private": true,
-  "version": "0.0.0",
-  "description": "natural language concrete syntax tree",
-  "license": "MIT",
-  "keywords": [],
-  "repository": "syntax-tree/nlcst",
-  "bugs": "https://github.com/syntax-tree/nlcst/issues",
   "author": "Titus Wormer <tituswormer@gmail.com> (wooorm.com)",
+  "bugs": "https://github.com/syntax-tree/nlcst/issues",
   "contributors": [
-    "Titus Wormer <tituswormer@gmail.com> (wooorm.com)",
-    "Eugene Sharygin <eush77@gmail.com>"
+    "Eugene Sharygin <eush77@gmail.com>",
+    "Titus Wormer <tituswormer@gmail.com> (wooorm.com)"
   ],
+  "description": "natural language concrete syntax tree",
   "devDependencies": {
     "remark-cli": "^12.0.0",
     "remark-preset-wooorm": "^10.0.0"
   },
-  "scripts": {
-    "format": "remark . -qfo",
-    "test": "npm run format"
-  },
+  "keywords": [],
+  "license": "MIT",
+  "name": "nlcst",
+  "private": true,
   "remarkConfig": {
     "plugins": [
       "remark-preset-wooorm"
     ]
-  }
+  },
+  "repository": "syntax-tree/nlcst",
+  "scripts": {
+    "format": "remark . -qfo",
+    "test": "npm run format"
+  },
+  "version": "0.0.0"
 }
