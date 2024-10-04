@@ -42,19 +42,22 @@ The latest released version is [`1.0.2`][latest].
 
 This document defines a format for representing natural language as a [concrete
 syntax tree][syntax-tree].
-Development of nlcst started in May 2014, in the now deprecated [textom][]
-project for [retext][], before [unist][] existed.
+Development of nlcst started in May 2014,
+in the now deprecated [textom][] project for [retext][],
+before [unist][] existed.
 This specification is written in a [Web IDL][webidl]-like grammar.
 
 ### Where this specification fits
 
-nlcst extends [unist][], a format for syntax trees, to benefit from its
-[ecosystem of utilities][utilities].
+nlcst extends [unist][],
+a format for syntax trees,
+to benefit from its [ecosystem of utilities][utilities].
 
 nlcst relates to [JavaScript][] in that it has an [ecosystem of
 utilities][list-of-utilities] for working with compliant syntax trees in
 JavaScript.
-However, nlcst is not limited to JavaScript and can be used in other programming
+However,
+nlcst is not limited to JavaScript and can be used in other programming
 languages.
 
 nlcst relates to the [unified][] and [retext][] projects in that nlcst syntax
@@ -62,8 +65,8 @@ trees are used throughout their ecosystems.
 
 ## Types
 
-If you are using TypeScript, you can use the nlcst types by installing them
-with npm:
+If you are using TypeScript,
+you can use the nlcst types by installing them with npm:
 
 ```sh
 npm install @types/nlcst
@@ -112,7 +115,8 @@ interface Paragraph <: Parent {
 with a particular point or idea.
 
 **Paragraph** can be used in a [**root**][dfn-root] node.
-It can contain [**sentence**][dfn-sentence], [**whitespace**][dfn-whitespace],
+It can contain [**sentence**][dfn-sentence],
+[**whitespace**][dfn-whitespace],
 and [**source**][dfn-source] nodes.
 
 ### `Punctuation`
@@ -139,10 +143,11 @@ interface Root <: Parent {
 
 **Root** ([**Parent**][dfn-parent]) represents a document.
 
-**Root** can be used as the [*root*][term-root] of a [*tree*][term-tree], never
-as a [*child*][term-child].
-Its content model is not limited, it can contain any nlcst content, with the
-restriction that all content must be of the same category.
+**Root** can be used as the [*root*][term-root] of a [*tree*][term-tree],
+never as a [*child*][term-child].
+Its content model is not limited,
+it can contain any nlcst content,
+with the restriction that all content must be of the same category.
 
 ### `Sentence`
 
@@ -154,13 +159,16 @@ interface Sentence <: Parent {
 ```
 
 **Sentence** ([**Parent**][dfn-parent]) represents grouping of grammatically
-linked words, that in principle tells a complete thought, although it may make
-little sense taken in isolation out of context.
+linked words,
+that in principle tells a complete thought,
+although it may make little sense taken in isolation out of context.
 
 **Sentence** can be used in a [**paragraph**][dfn-paragraph] node.
-It can contain [**word**][dfn-word], [**symbol**][dfn-symbol],
-[**punctuation**][dfn-punctuation], [**whitespace**][dfn-whitespace], and
-[**source**][dfn-source] nodes.
+It can contain [**word**][dfn-word],
+[**symbol**][dfn-symbol],
+[**punctuation**][dfn-punctuation],
+[**whitespace**][dfn-whitespace],
+and [**source**][dfn-source] nodes.
 
 ### `Source`
 
@@ -171,10 +179,14 @@ interface Source <: Literal {
 ```
 
 **Source** ([**Literal**][dfn-literal]) represents an external (ungrammatical)
-value embedded into a grammatical unit: a hyperlink, code, and such.
+value embedded into a grammatical unit: a hyperlink,
+code,
+and such.
 
-**Source** can be used in [**root**][dfn-root], [**paragraph**][dfn-paragraph],
-[**sentence**][dfn-sentence], or [**word**][dfn-word] nodes.
+**Source** can be used in [**root**][dfn-root],
+[**paragraph**][dfn-paragraph],
+[**sentence**][dfn-sentence],
+or [**word**][dfn-word] nodes.
 
 ### `Symbol`
 
@@ -186,7 +198,8 @@ interface Symbol <: Literal {
 
 **Symbol** ([**Literal**][dfn-literal]) represents typographical devices
 different from characters which represent sounds (like letters and numerals),
-white space, or punctuation.
+white space,
+or punctuation.
 
 **Symbol** can be used in [**sentence**][dfn-sentence] or [**word**][dfn-word]
 nodes.
@@ -213,10 +226,12 @@ interface WhiteSpace <: Literal {
 ```
 
 **WhiteSpace** ([**Literal**][dfn-literal]) represents typographical devices
-devoid of content, separating other units.
+devoid of content,
+separating other units.
 
 **WhiteSpace** can be used in [**root**][dfn-root],
-[**paragraph**][dfn-paragraph], or [**sentence**][dfn-sentence] nodes.
+[**paragraph**][dfn-paragraph],
+or [**sentence**][dfn-sentence] nodes.
 
 ### `Word`
 
@@ -231,8 +246,10 @@ interface Word <: Parent {
 uttered in isolation with semantic or pragmatic content.
 
 **Word** can be used in a [**sentence**][dfn-sentence] node.
-It can contain [**text**][dfn-text], [**symbol**][dfn-symbol],
-[**punctuation**][dfn-punctuation], and [**source**][dfn-source] nodes.
+It can contain [**text**][dfn-text],
+[**symbol**][dfn-symbol],
+[**punctuation**][dfn-punctuation],
+and [**source**][dfn-source] nodes.
 
 ## Glossary
 
@@ -292,12 +309,17 @@ ways to get started.
 See [`support.md`][support] for ways to get help.
 Ideas for new utilities and tools can be posted in [`syntax-tree/ideas`][ideas].
 
-A curated list of awesome syntax-tree, unist, mdast, hast, xast, and nlcst
-resources can be found in [awesome syntax-tree][awesome].
+A curated list of awesome syntax-tree,
+unist,
+mdast,
+hast,
+xast,
+and nlcst resources can be found in [awesome syntax-tree][awesome].
 
 This project has a [code of conduct][coc].
-By interacting with this repository, organization, or community you agree to
-abide by its terms.
+By interacting with this repository,
+organization,
+or community you agree to abide by its terms.
 
 ## Acknowledgments
 
@@ -307,8 +329,8 @@ The initial release of this project was authored by
 Thanks to
 [**@nwtn**](https://github.com/nwtn),
 [**@tmcw**](https://github.com/tmcw),
-[**@muraken720**](https://github.com/muraken720), and
-[**@dozoisch**](https://github.com/dozoisch)
+[**@muraken720**](https://github.com/muraken720),
+and [**@dozoisch**](https://github.com/dozoisch)
 for contributing to nlcst and related projects!
 
 ## License
